@@ -20,6 +20,7 @@ class DocumentChunk(Base):
     user_id = Column(UUID(as_uuid=True), ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
 
     document = relationship("Document", back_populates="chunks")
+    corpus = relationship("Corpus", back_populates="document_chunks")
 
     __table_args__ = (
         UniqueConstraint("document_id", "chunk_number"),
