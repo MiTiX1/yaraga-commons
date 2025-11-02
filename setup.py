@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="yaraga-commons",
-    version="1.0.2",
+    version="1.0.3",
     author="BB",
     description="Common utilities and models for Yet Another RAG App",
     packages=find_packages(),
