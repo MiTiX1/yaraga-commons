@@ -15,5 +15,4 @@ class User(Base):
     updated_at = Column(TIMESTAMP(timezone=True), server_default=text("NOW()"))
 
     corpuses = relationship("Corpus", back_populates="user", cascade="all, delete-orphan")
-    document_chunks = relationship("DocumentChunk", back_populates="user", cascade="all, delete-orphan")
     document_activities = relationship("UserDocumentActivity", back_populates="user", cascade="all, delete-orphan")
