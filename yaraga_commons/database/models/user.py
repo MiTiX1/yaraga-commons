@@ -10,6 +10,7 @@ class User(Base):
     id = Column(UUID(as_uuid=True), primary_key=True, server_default=text("gen_random_uuid()"))
     google_sub = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
+    password = Column(String, nullable=False)
     name = Column(String)
     created_at = Column(TIMESTAMP(timezone=True), server_default=text("NOW()"))
     updated_at = Column(TIMESTAMP(timezone=True), server_default=text("NOW()"))
